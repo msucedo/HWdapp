@@ -1,0 +1,13 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+/contracts/node_modules
+/contracts/.env
+/contracts/coverage
+/contracts/coverage.json
+/contracts/typechain
+/contracts/cache
+/contracts/artifacts
+/contracts/secret.json

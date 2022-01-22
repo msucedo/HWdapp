@@ -1,0 +1,32 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.mainContainer {
+  width: 50%;
+  margin: 10% auto;
+}
+
+.dataContainer {
+  text-align: center;
+}
+
+.dataBottom {
+  display:flex;
+  flex-direction: column;
+}
+
+.dataBottom button {
+  margin: 0 auto;
+}
+
+.dataBottom a {
+  text-decoration: none;
+  color: white;
+  margin: 10% 0 0 0;
+}
+
+.dataBottom a:hover {
+  text-decoration: underline;
+}
