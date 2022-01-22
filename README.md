@@ -2,6 +2,13 @@
 
 HWdapp is your hello world decentralized application. Contains the basic functionality so you can use it as a template and start building your own application.
 
+## what you will need
+
+1. npm
+2. an alchemy.com account
+3. metamask account
+4. fake ether from the testnet you want to use
+
 ## Installation
 
 Clone this repository, 'cd' into the folder and let npm work
@@ -41,7 +48,7 @@ note: run the second command from a different terminal window but without closin
 - to test on a testnet (i.e. rinkeby)
 1. go to HWdapp/contracts
 2. create a file called "secret.json"
-3. add your alchemyapi url and your metamask private key
+3. add your alchemy.com api url and your metamask account private key
 4. from HWapp/contracts try:
 ```bash
 run npx hardhat run scripts/deploy.js --network rinkeby
@@ -62,8 +69,12 @@ I don't consider myself an expert, take this code as what it is (a path to the n
 Please note the goal of this repository is to give a clearer path of how to locally build dapps, I found myself having trouble to understand how to develop locally and now that I have a kinda better idea I wanted to share with anyone interested the tools that I used and make available this simple template.
 
 - note1: these are not the only tools available to build and deploy dapps.
-- note2: any questions, comments, suggestions feel free to ping me at discord @msaucedo#2231
-- note3: I used solidity 0.8.4 - (no specific reason)
+- note2: I used solidity 0.8.4 - (no specific reason)
+- note3: regarding the alchemy.com account, it is free, from there we just need to create an app and copy the its key
+- note4: get fake ether for rinkeby testnet: https://faucet.rinkeby.io
+- note5: I did not talk about some steps because I though you could handle them by yourself (funding your metamask with fake ether, create an alchemy account, etc)
+- note6: any questions, comments, suggestions feel free to ping me at discord @msaucedo#2231
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
