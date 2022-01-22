@@ -2,6 +2,13 @@
 
 HWdapp is your hello world decentralized application. Contains the basic functionality so you can use it as a template and start building your own application.
 
+## what the dapp does?
+- show text stored in the blockchain, and update that text. interact directly with ethereum blockchain!! (a testnet).
+
+- feel free to udpdate the text of my contract through ehterscan.io at RINKEBY -> 0x06188947C018B21b9D20417D31A7f00f414919e4
+
+- after making the transaction to updat the text, please wait around 20 seconds there, until the transaction is confirmed, the app will automatically detect the change and update the text.
+
 ## what you will need
 
 1. npm

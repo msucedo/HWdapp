@@ -13,7 +13,7 @@ const main = async () => {
 	console.log("TEXT: ", text);
 
 	// change text
-	await helloWorldContract.updateText("msucedo");
+	await helloWorldContract.updateText("this wasn't here right?");
 	console.log("TEXT: ", text);
 
 	// read text

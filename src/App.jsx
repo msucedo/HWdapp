@@ -115,9 +115,11 @@ export default function App() {
   return (
     <div className="mainContainer">
       <div className="dataContainer">
-        {(currentAccount && visibleTitle!="")&& (
+        {currentAccount && (
           <div className="dataTop">
-            <h1>Hello, {visibleTitle}!</h1>
+            {visibleTitle && (
+              <h1>Hello, {visibleTitle}!</h1>
+            )}
             <input value={textTitle==visibleTitle?"":textTitle} onInput={(e) => setTextTitle(e.target.value)}/>
             <button className="updateTextButton" onClick={()  => updateText()}>new text</button>
           </div>
