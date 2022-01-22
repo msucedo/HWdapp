@@ -10,6 +10,11 @@ cd HWdapp
 npm install
 ``` 
 The package.json should be able to download all needed dependencies.
+note: in case hardhat was not automatically installed please run:
+```bash
+cd HWdapp/contracts
+npm install
+``` 
 
 ## Usage
 
@@ -56,8 +61,9 @@ I don't consider myself an expert, take this code as what it is (a path to the n
 
 Please note the goal of this repository is to give a clearer path of how to locally build dapps, I found myself having trouble to understand how to develop locally and now that I have a kinda better idea I wanted to share with anyone interested the tools that I used and make available this simple template.
 
-note1: these are not the only tools available to build and deploy dapps.
-note2: any questions, comments, suggestions feel free to ping me at discord @msaucedo#2231
+- note1: these are not the only tools available to build and deploy dapps.
+- note2: any questions, comments, suggestions feel free to ping me at discord @msaucedo#2231
+- note3: I used solidity 0.8.4 - (no specific reason)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
