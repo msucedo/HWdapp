@@ -10,4 +10,4 @@ dist-ssr
 /contracts/typechain
 /contracts/cache
 /contracts/artifacts
-/contracts/secret.json
+/contracts/secretMario.json

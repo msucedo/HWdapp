@@ -67,7 +67,7 @@ note: run the second command from a different terminal window but without closin
 
 - to test on a testnet (i.e. rinkeby)
 1. go to HWdapp/contracts
-2. create a file called "secret.json"
+2. open file called "secret.json"
 3. add your alchemy.com api url and your metamask account private key
 4. from HWapp/contracts try:
 ```bash
