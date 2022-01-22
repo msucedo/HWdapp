@@ -104,7 +104,7 @@ Please note the goal of this repository is to give a clearer path of how to loca
 > - ethers - bridge react and hardhat (interact with your contract from the front-end)
 
 - I'm having issues compiling and running the project, what should I do?
-> go to the terminal, write down the error and try googling it.
+> go to the terminal, write down the error and try googling it, if no luck ping me @msaucedo#2231 at discord.
 
 - What is that run.js and deploy.js files for?
 > After building your smart contract, you will need to test it. Even tho testing on a testnet is way more fun, sometimes we need to test locally.
