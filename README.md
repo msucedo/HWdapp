@@ -1,6 +1,17 @@
 # Hello World DAPP
 
-HWdapp is your hello world decentralized application. Contains the basic functionality so you can use it as a template and start building your own application.
+HWdapp is a hello world decentralized application. Contains the basic functionality so you can use it as a template and start building your own application.
+
+Think of it as a hello world dapp starter kit.
+
+## Table of contents
+  * [what the dapp does?](#what-the-dapp-does-)
+  * [what you will need](#what-you-will-need)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Disclaimer](#disclaimer)
+  * [FAQ](#faq)
+  * [License](#license)
 
 ## what the dapp does?
 
