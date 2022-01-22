@@ -11,3 +11,4 @@ dist-ssr
 /contracts/cache
 /contracts/artifacts
 /contracts/secretMario.json
+/contracts/secret.json
