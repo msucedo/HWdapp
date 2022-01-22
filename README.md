@@ -10,7 +10,7 @@ cd HWdapp
 npm install
 ``` 
 The package.json should be able to download all needed dependencies.
-note: in case hardhat was not automatically installed please run:
+- note: in case hardhat was not automatically installed please run:
 ```bash
 cd HWdapp/contracts
 npm install
