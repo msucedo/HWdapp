@@ -12,6 +12,7 @@ Think of it as a hello world dapp starter kit.
   * [Disclaimer](#disclaimer)
   * [FAQ](#faq)
   * [License](#license)
+  * [Other helpful resources](#other-helpful-resources)
 
 ## what the dapp does?
 
@@ -111,6 +112,12 @@ Please note the goal of this repository is to give a clearer path of how to loca
 > - run.js will deploy your contract in a local blockchain live only during code execution
 > - deploy.js will depoy your contract in a local blockchain, live undefined (till your shut it down) this is done with hardhat, something cool with this method is that you will have 20 Etherium addreses, 1000eth, and a 0 mined blocks blockchain.
 
+
+## Other helpful resources
+- [https://buildspace.so](url) - this is where this repo comes from!
+- [https://eth.build](url)
+- [https://docs.soliditylang.org/en/v0.8.11/index.html](url) - can't forget about this!
+- [https://cryptozombies.io](url)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
