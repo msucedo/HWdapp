@@ -11,8 +11,8 @@ Think of it as a hello world dapp starter kit.
   * [Usage](#usage)
   * [Disclaimer](#disclaimer)
   * [FAQ](#faq)
-  * [License](#license)
   * [Other helpful resources](#other-helpful-resources)
+  * [License](#license)
 
 ## what the dapp does?
 
@@ -20,7 +20,7 @@ Think of it as a hello world dapp starter kit.
 
 - show text stored in the blockchain, and update that text. interact directly with ethereum blockchain!! (a testnet).
 
-- feel free to udpdate the text of my contract through ehterscan.io at RINKEBY -> 0x06188947C018B21b9D20417D31A7f00f414919e4
+- feel free to udpdate the text of my contract through ehterscan.io at RINKEBY -> 0x6Ede242fe946FC5792c9a7a57429fbF8F1b850E2
 
 - after making the transaction to update the text, please wait around 20 seconds there, until the transaction is confirmed, the app will automatically detect the change and update the text.
 
