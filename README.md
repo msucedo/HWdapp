@@ -27,7 +27,7 @@ Think of it as a hello world dapp starter kit.
 
 ## Basic architecture diagram
 
-![Screenshoot2](./docs/HWdappArchitecture.png)
+![Screenshoot2](./docs/HWdappArchitecture2.png)
 
 ## what you will need
 
