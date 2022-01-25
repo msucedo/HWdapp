@@ -6,6 +6,7 @@ Think of it as a hello world dapp starter kit.
 
 ## Table of contents
   * [what the dapp does?](#what-the-dapp-does-)
+  * [Architecture diagram](architecture-diagram)
   * [what you will need](#what-you-will-need)
   * [Installation](#installation)
   * [Usage](#usage)
@@ -23,6 +24,10 @@ Think of it as a hello world dapp starter kit.
 - feel free to udpdate the text of my contract through ehterscan.io at RINKEBY -> 0x6Ede242fe946FC5792c9a7a57429fbF8F1b850E2
 
 - after making the transaction to update the text, please wait around 20 seconds there, until the transaction is confirmed, the app will automatically detect the change and update the text.
+
+## Basic architecture diagram
+
+![Screenshoot2](./docs/HWdappArchitecture.png)
 
 ## what you will need
 
