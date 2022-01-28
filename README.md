@@ -21,7 +21,7 @@ Think of it as a hello world dapp starter kit.
 
 - show text stored in the blockchain, and update that text. interact directly with ethereum blockchain!! (a testnet).
 
-- feel free to udpdate the text of my contract through ehterscan.io at RINKEBY -> 0x6Ede242fe946FC5792c9a7a57429fbF8F1b850E2
+- feel free to udpdate the text of my contract through ehterscan.io at RINKEBY -> 0x4E98dfb698055717c013C42e2F84989e9bC9631a
 
 - after making the transaction to update the text, please wait around 20 seconds there, until the transaction is confirmed, the app will automatically detect the change and update the text.
 
@@ -90,14 +90,14 @@ npm run dev
 that will run vite and our app will be live!
 
 ## Disclaimer
-I don't consider myself an expert, take this code as what it is (a path to the needed tools, folders, configurations to build, test and deploy locally a dapp)
+you might find bugs, but for the simplicity and goal of the exercise they don't represent a risk, take this code as what it is (a path to the needed tools, folders, configurations to build, test and deploy locally a dapp).
 
-Please note the goal of this repository is to give a clearer path of how to locally build dapps, I found myself having trouble to understand how to develop locally and now that I have a kinda better idea I wanted to share with anyone interested the tools that I used and make available this simple template.
+Please note the goal of this repository is to give a clearer path of (one in between many choices you have on) how to locally build dapps, I found myself having trouble to understand how to develop locally and now that I have a kinda better idea I wanted to share with anyone interested the tools that I used and make available this simple template.
 
 - note1: these are not the only tools available to build and deploy dapps.
-- note2: I used solidity 0.8.4 - (no specific reason)
+- note2: I used solidity 0.8.4
 - note3: regarding the alchemy.com account, it is free, from there we just need to create an app and copy the its key
-- note4: I did not talk about some steps because I though you could handle them by yourself (funding your metamask with fake ether, create an alchemy account, etc)
+1. - note4: I did not talk about some steps as they are easily self explanatory (funding your metamask with fake ether, create an alchemy account, etc)
 - note5: any questions, comments, suggestions feel free to ping me at discord @msaucedo#2231
 
 
@@ -121,7 +121,7 @@ Please note the goal of this repository is to give a clearer path of how to loca
 ## Other helpful resources
 - [https://buildspace.so](url) - this is where this repo comes from!
 - [https://eth.build](url)
-- [https://docs.soliditylang.org/en/v0.8.11/index.html](url) - can't forget about this!
+- [https://github.com/scaffold-eth/scaffold-eth](url)
 - [https://cryptozombies.io](url)
 
 ## License
