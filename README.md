@@ -137,10 +137,10 @@ Please note the goal of this repository is to give a clearer path of (one in bet
 
 
 ## Other helpful resources
-- [https://buildspace.so](url) - this is where this repo comes from!
-- [https://eth.build](url)
-- [https://github.com/scaffold-eth/scaffold-eth](url)
-- [https://cryptozombies.io](url)
+- [buildsapce.so](https://buildspace.so) - this is where this repo comes from!
+- [eth.build](https://eth.build)
+- [scaffold-eth](https://github.com/scaffold-eth/scaffold-eth)
+- [cryptozombies](https://cryptozombies.io)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
