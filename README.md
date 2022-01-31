@@ -38,56 +38,74 @@ Think of it as a hello world dapp starter kit.
 
 ## Installation
 
-Clone this repository, 'cd' into the folder and let npm work
+1. Clone repository
+```bash
+git clone https://github.com/msucedo/HWdapp.git
+``` 
+
+2. install dependencies
 ```bash
 cd HWdapp
 npm install
-``` 
-The package.json should be able to download all needed dependencies.
-- note: in case hardhat was not automatically installed please go into "HWdapp/contracts" and run:
+```
+The package.json should download all needed dependencies.
+
+3. Install hardhat
 ```bash
+cd HWdapp/contracts
 npm install
 ``` 
 
 ## Usage
 
-- to compile, run from "HWdpp/contracts"
+- to compile
 
 ```bash
+cd HWdapp/contracts
 npx hardhat compile
 ```
 
-- to test on a local network (live only during execution), run from "HWdpp/contracts"
+- to test on a local network (live only during execution)
 ```bash
+cd HWdapp/contracts
 npx hardhat run scripts/run.js
 ```
 
-- to test on a local network (live undefined) with access to 20 accounts, with 1000eth, 0 blocks mined.
+- to test on a local network (live undefined) with access to 20 accounts, with 1000eth, 0 blocks mined. note: two open terminal windows needed.
+###### 	Terminal window 1
 ```bash
+cd HWdapp/contracts
 npx hardhat node
-npx hardhat run scripts/deploy.js --network localhost
 ```
-
-note: run the second command from a different terminal window but without closing the first terminal window with the first command running
-
+###### Terminal window 2
+```bash
+cd HWdapp/contracts
+npx hardhat run scripts/deploy.js --network localhost
+```	
 
 - to test on a testnet (i.e. rinkeby)
-1. go to HWdapp/contracts
-2. open file called "secret.json"
-3. add your alchemy.com api url and your metamask account private key
-4. from HWapp/contracts try:
+1. edit "HWdapp/contracts/secret.json"
+2. add your alchemy.com api url and your metamask account private key
+3. edit "HWdapp/contracts/hardhat.config.js"
+4. remove last comment to enable "networks" settings to work
+3. run
 ```bash
-run npx hardhat run scripts/deploy.js --network rinkeby
-```
+cd HWdapp/contracts
+npx hardhat run scripts/deploy.js --network rinkeby
+```	
+###### note: copy the contract address from your terminal window, open etherscan.io for the rinkeby network at search for this address. you should be able to see your contract.
 
-- link your contract and react
-1. open "HWapp/src/App.jsx"
-2. replace "contractAddress" with your contract address
-3. from HWdapp root folder try:
+- give your contract a front end!
 ```bash
+cd HWapp/src/App.jsx
+```
+2. look for this property "contractAddress" and update it with your contract address
+3. run
+```bash
+cd HWdapp
 npm run dev
 ```
-that will run vite and our app will be live!
+that will run vite and our app will be live! at `http://localhost:3000/`
 
 ## Disclaimer
 you might find bugs, but for the simplicity and goal of the exercise they don't represent a risk, take this code as what it is (a path to the needed tools, folders, configurations to build, test and deploy locally a dapp).
@@ -96,8 +114,8 @@ Please note the goal of this repository is to give a clearer path of (one in bet
 
 - note1: these are not the only tools available to build and deploy dapps.
 - note2: I used solidity 0.8.4
-- note3: regarding the alchemy.com account, it is free, from there we just need to create an app and copy the its key
-1. - note4: I did not talk about some steps as they are easily self explanatory (funding your metamask with fake ether, create an alchemy account, etc)
+- note3: regarding the alchemy.com account, it is free, from there we just need to create an app and copy the application key
+- note4: I did not talk about some steps as they are easily self explanatory (funding your metamask with fake ether, create an alchemy account, etc)
 - note5: any questions, comments, suggestions feel free to ping me at discord @msaucedo#2231
 
 
