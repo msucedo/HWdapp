@@ -36,7 +36,8 @@ Think of it as a hello world dapp starter kit.
 > - ethers - Communicate with the blockchain and bridge to frontend
 > - hardhat - compile, test and create a local blockchain
 
-![Screenshot3](./docs/tech_stack.png)
+![Screenshot3](./docs/tech_stack2.png)
+###### each red box represents the main file name from each technology
 
 
 ## what you will need
