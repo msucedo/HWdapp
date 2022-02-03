@@ -6,7 +6,8 @@ Think of it as a hello world dapp starter kit.
 
 ## Table of contents
   * [what the dapp does?](#what-the-dapp-does-)
-  * [Architecture diagram](architecture-diagram)
+  * [Architecture diagram](#architecture-diagram)
+  * [Technologies stack](#technologies-stack)
   * [what you will need](#what-you-will-need)
   * [Installation](#installation)
   * [Usage](#usage)
@@ -28,6 +29,15 @@ Think of it as a hello world dapp starter kit.
 ## Basic architecture diagram
 
 ![Screenshoot2](./docs/HWdappArchitecture2.png)
+
+## technologies stack
+> - react js - build front end, animations, make your app look cute
+> - vite - live server to deploy your dapp locally
+> - ethers - Communicate with the blockchain and bridge to frontend
+> - hardhat - compile, test and create a local blockchain
+
+![Screenshot3](./docs/tech_stack.png)
+
 
 ## what you will need
 
@@ -120,12 +130,6 @@ Please note the goal of this repository is to give a clearer path of (one in bet
 
 
 ## FAQ
-
-- what technologies do you use?
-> - hardhat - compile, test and create a local blockchain
-> - react js - build front end, animations, make your app look cute
-> - vite - live server to deploy your dapp locally
-> - ethers - bridge react and hardhat (interact with your contract from the front-end)
 
 - I'm having issues compiling and running the project, what should I do?
 > go to the terminal, write down the error and try googling it, if no luck ping me @msaucedo#2231 at discord.
