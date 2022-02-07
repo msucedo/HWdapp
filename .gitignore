@@ -12,6 +12,7 @@ dist-ssr
 /hardhat-zone/artifacts
 /hardhat-zone/legacyContracts
 /hardhat-zone/legacySrc
+/hardhat-zone/secret.json
 
 /react-zone/node_modules
 /.pnp
