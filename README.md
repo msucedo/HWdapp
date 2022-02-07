@@ -5,7 +5,7 @@ HWdapp is a hello world decentralized application. Contains the basic functional
 Think of it as a hello world dapp starter kit.
 
 ## Table of contents
-  * [what the dapp does?](#what-the-dapp-does-)
+  * [What the dapp does?](#what-the-dapp-does-)
   * [Architecture diagram](#architecture-diagram)
   * [Technologies stack](#technologies-stack)
   * [Prerequisites](#prerequisites)
