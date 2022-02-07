@@ -16,7 +16,7 @@ Think of it as a hello world dapp starter kit.
   * [Other helpful resources](#other-helpful-resources)
   * [License](#license)
 
-## what the dapp does?
+## What the dapp does?
 
 ![Screenshot](./docs/HWdapp.png)
 
@@ -24,13 +24,11 @@ Think of it as a hello world dapp starter kit.
 
 - feel free to udpdate the text of my contract through ehterscan.io at RINKEBY -> 0x4E98dfb698055717c013C42e2F84989e9bC9631a
 
-- after making the transaction to update the text, please wait around 20 seconds there, until the transaction is confirmed, the app will automatically detect the change and update the text.
-
 ## Basic architecture diagram
 
 ![Screenshoot2](./docs/HWdappArchitecture2.png)
 
-## technologies stack
+## Technologies stack
 > - react - build front end, animations, make your app look cute
 > - ethers - Communicate with the blockchain and bridge to frontend
 > - hardhat - compile, test and create a local blockchain
@@ -41,7 +39,7 @@ Think of it as a hello world dapp starter kit.
 
 ## Prerequisites
 
-1. npm and nodejs
+1. node js and npm
 2. metamask account -> [https://metamask.io](url)
 3. an alchemy.com account -> [https://www.alchemy.com](url) (only if you want to deploy to testnet)
 4. fake ether from the testnet you want to use  -> [https://faucet.rinkeby.io](url) (only if you want to deploy to testnet)
@@ -123,6 +121,14 @@ Please note the goal of this repository is to give a clearer path of (one in bet
 
 - I'm having issues compiling and running the project, what should I do?
 > I'd encourage you to go try solve the issue by yourself, if no luck ping me @msaucedo#2231 at discord.
+
+- I deployed my contract to my locahost network using hardhat but after updating my contract I don't see the changes
+> everytime you make a change to your contract, you need to deploy it again.
+
+- I ran "npm start" but I can't deploy my contract
+> 1. make sure you are running your localhost node with hardhat
+> 2. deploy your smart contract to your localhost network
+> 3. run your frontend with "npm start"
 
 
 
