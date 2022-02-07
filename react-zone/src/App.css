@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.mainContainer {
+  width: 50%;
+  margin: 10% auto;
+}
+
+.dataContainer {
+  text-align: center;
+}
+
+.dataTop-action {
+  margin: 5% auto;
+}
+
+.dataBottom {
+  display:flex;
+  flex-direction: column;
+}
+
+.dataBottom button {
+  margin: 0 auto;
+}
+
+.dataBottom a {
+  text-decoration: none;
+  color: white;
+  margin: 10% 0 0 0;
+}
+
+.dataBottom a:hover {
+  text-decoration: underline;
+}
+
+.blockies {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.blockiesAddress {
+  margin-top: 2%;
+  color: white;
+  text-decoration: none;
+}

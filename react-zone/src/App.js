@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import './App.css';
-import abi from '../contracts/artifacts/contracts/HelloWorld.sol/HelloWorld.json';
+import abi from '../src/artifacts/contracts/HelloWorld.sol/HelloWorld.json';
+
+const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 
 export default function App() {
   const [textTitle, setTextTitle] = useState(""); // manages input and sending new text
   const [visibleTitle, setVisibleTitle] = useState(""); // manages the website title and retrieve new text
-  const contractAddress = "0x6Ede242fe946FC5792c9a7a57429fbF8F1b850E2";
   const contractABI =  abi.abi;
 
   /*store user public key*/
@@ -23,7 +24,7 @@ export default function App() {
       const accounts = await ethereum.request({method: "eth_accounts"});
       if (accounts.length !== 0) {
         const account = accounts[0];
-        console.log("Found an authorized account:", account);
+        console.log("Connected account:", account);
         setCurrentAccount(account)
         // show last text on UI everytime
         const callGetText = getText();
@@ -69,12 +70,10 @@ export default function App() {
 
         // calling function from contract
         let textTxn = await helloWorldContract.getText();
-        console.log("mining...");
-        console.log(textTxn);
+        console.log("text: ",textTxn);
         setTextTitle(textTxn);
         setVisibleTitle(textTxn);
         await textTxn.wait;
-        console.log("Mined -- ", textTxn.hash);
       } else {
         console.log("Ethereum object doesn't exist!");
       }
@@ -120,8 +119,10 @@ export default function App() {
             {visibleTitle && (
               <h1>Hello, {visibleTitle}!</h1>
             )}
-            <input value={textTitle==visibleTitle?"":textTitle} onInput={(e) => setTextTitle(e.target.value)}/>
-            <button className="updateTextButton" onClick={()  => updateText()}>new text</button>
+            <div className="dataTop-action">
+              <input value={textTitle==visibleTitle?"":textTitle} onInput={(e) => setTextTitle(e.target.value)}/>
+              <button className="updateTextButton" onClick={()  => updateText()}>new text</button>
+            </div>
           </div>
         )}
         {!currentAccount && (
