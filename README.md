@@ -39,7 +39,7 @@ Think of it as a hello world dapp starter kit.
 
 ## Prerequisites
 
-1. node js and npm
+1. node js and yarn
 2. metamask account -> [https://metamask.io](url)
 3. an alchemy.com account -> [https://www.alchemy.com](url) (only if you want to deploy to testnet)
 4. fake ether from the testnet you want to use  -> [https://faucet.rinkeby.io](url) (only if you want to deploy to testnet)
@@ -53,14 +53,8 @@ git clone https://github.com/msucedo/HWdapp.git
 
 2. Install dependencies
 ```bash
-cd HWdapp/react-zone
-npm install
-```
-and
-
-```bash
-cd HWdapp/hardhat-zone
-npm install
+cd HWdapp
+yarn install
 ```
 
 ## Usage
@@ -69,19 +63,19 @@ npm install
 
 ```bash
 cd HWdapp/hardhat-zone
-npx hardhat compile
+yarn hardhat compile
 ```
 
 - To test on hardhat local network with access to 20 accounts, with 1000eth, 0 blocks mined. note: three open terminal windows needed.
 ###### 	Terminal window 1 - deploy local blockchain
 ```bash
 cd HWdapp/hardhat-zone
-npx hardhat node
+yarn hardhat node
 ```
 ###### Terminal window 2 - deploy contract to local blockchain
 ```bash
 cd HWdapp/hardhat-zone
-npx hardhat run scripts/deploy.js --network localhost
+yarn hardhat run scripts/deploy.js --network localhost
 ```	
 copy the address from the terminal window
 1. open HWdapp/react-zone/src/app.js
@@ -89,7 +83,7 @@ copy the address from the terminal window
 ###### Terminal window 3 - deploy server to interact with your application at `http://localhost:3000/`
 ```bash
 cd HWdapp/react-zone
-npm start
+yarn start
 ```	
 
 
@@ -101,7 +95,7 @@ npm start
 3. run below commands
 ```bash
 cd HWdapp/hardhat-zone
-npx hardhat run scripts/deploy.js --network rinkeby
+yarn hardhat run scripts/deploy.js --network rinkeby
 ```	
 ###### note: copy the contract address from your terminal window, open etherscan.io for the rinkeby network at search for this address. you should be able to see your contract.
 
@@ -125,10 +119,10 @@ Please note the goal of this repository is to give a clearer path of (one in bet
 - I deployed my contract to my locahost network using hardhat but after updating my contract I don't see the changes
 > everytime you make a change to your contract, you need to deploy it again.
 
-- I ran "npm start" but I can't deploy my contract
+- I ran "yarn start" but I can't deploy my contract
 > 1. make sure you are running your localhost node with hardhat
 > 2. deploy your smart contract to your localhost network
-> 3. run your frontend with "npm start"
+> 3. run your frontend with "yarn start"
 
 
 
