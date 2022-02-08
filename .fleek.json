@@ -1,0 +1,11 @@
+{
+    "build": {
+      "image": "fleek/create-react-app:node-16",
+      "command": "cd hardhat-zone && yarn hardhart compile && cd .. && yarn && yarn build",
+      "publicDir": "build",
+      "baseDir": "react-zone",
+      "environment": {
+        "SOME_ENV": "Build finished!"
+      }
+    }
+   }
