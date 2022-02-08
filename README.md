@@ -133,7 +133,7 @@ Please note the goal of this repository is to give a clearer path of (one in bet
 
 
 ## Other helpful resources
-- [buildsapce.so](https://buildspace.so) - this is where this repo comes from!
+- [buildspace.so](https://buildspace.so) - this is where this repo comes from!
 - [eth.build](https://eth.build)
 - [scaffold-eth](https://github.com/scaffold-eth/scaffold-eth)
 - [cryptozombies](https://cryptozombies.io)
