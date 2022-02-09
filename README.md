@@ -11,6 +11,7 @@ Think of it as a hello world dapp starter kit.
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
   * [Usage](#usage)
+  * [key files](#Key-files)
   * [Disclaimer](#disclaimer)
   * [FAQ](#faq)
   * [Other helpful resources](#other-helpful-resources)
@@ -77,9 +78,6 @@ yarn chain
 cd HWdapp
 yarn deployLocal
 ```	
-copy the address from the terminal window
-1. open HWdapp/react-zone/src/app.js
-2. update "contractAddress" with your copied address.
 ###### Terminal window 3 - deploy server to interact with your application at `http://localhost:3000/`
 ```bash
 cd HWdapp
@@ -100,6 +98,11 @@ yarn deployTestnet
 ```	
 ###### note: copy the contract address from your terminal window, open etherscan.io for the rinkeby network at search for this address. you should be able to see your contract.
 
+## Key files
+> #### edit contract - HWdapp/hardhat-zone/contracts/HelloWorld.sol
+> #### edit frontend - HWdapp/react-zone/src/App.js
+
+##### everytime you update your contract, it will deploy with a new address, you need to point your frontend (in the above file) to that new address.
 
 ## Disclaimer
 you might find bugs, but for the simplicity and goal of the exercise they don't represent a risk, take this code as what it is (a path to the needed tools, folders, configurations to build, test and deploy locally a dapp).
@@ -114,17 +117,22 @@ Please note the goal of this repository is to give a clearer path of (one in bet
 
 ## FAQ
 
+- why the next text in the DAPP is not changing?
+> probably because common metamask error: "Nonce to high".
+> Solution: metamask>accounts>settings>advanced>reset account
+more on this here [nonce to high error](https://medium.com/@thelasthash/solved-nonce-too-high-error-with-metamask-and-hardhat-adc66f092cd)
+ 
+
 - I'm having issues compiling and running the project, what should I do?
 > if no luck by yourself, ping me @msaucedo#2231 at discord.
 
-- I deployed my contract to my locahost network using hardhat but after updating my contract I don't see the changes
-> everytime you make a change to your contract, you need to deploy it again and copy the new address to the HWdapp/react-zone/App.js file (automatically update this file is a nice to have enhacement I'm working on)
-
-- I ran "yarn start" but I can't deploy my contract
-> 1. make sure you are running your localhost node with hardhat
-> 2. deploy your smart contract to your localhost network
-> 3. run your frontend with "yarn start"
-
+- what if I want to make a change to the contract?
+> 1. make changes to the contract
+> 2. make sure your node and frontend server are up
+> 3. run "yarn deploy"
+> 4. copy the contract's address
+> 5. open "HWdapp/react-zone/src/App.js" update the property "contractAddress"
+##### note: automatically update this file is a nice to have I'm working on
 
 
 ## Other helpful resources
