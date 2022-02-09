@@ -4,6 +4,7 @@ dist-ssr
 *.local
 
 .yarn
+yarn-error.log
 
 /hardhat-zone/node_modules
 /hardhat-zone/.env
