@@ -11,7 +11,6 @@ Think of it as a hello world dapp starter kit.
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
   * [Usage](#usage)
-  * [key files](#Key-files)
   * [Disclaimer](#disclaimer)
   * [FAQ](#faq)
   * [Other helpful resources](#other-helpful-resources)
@@ -73,6 +72,8 @@ yarn compile
 cd HWdapp
 yarn chain
 ```
+> ###### please copy any account from the terminal output and add it to metamask, we will use our localhost 8545 network. how to? -> [add hardhat account to metamask](https://dev.to/dabit3/the-complete-guide-to-full-stack-ethereum-development-3j13)
+
 ###### Terminal window 2 - deploy contract to local blockchain
 ```bash
 cd HWdapp
@@ -83,7 +84,6 @@ yarn deployLocal
 cd HWdapp
 yarn start
 ```	
-
 
 - To test on a testnet (i.e. rinkeby)
 1. edit "HWdapp/hardhat-zone/secret.json"
@@ -98,9 +98,6 @@ yarn deployTestnet
 ```	
 ###### note: copy the contract address from your terminal window, open etherscan.io for the rinkeby network at search for this address. you should be able to see your contract.
 
-## Key files
-> #### edit contract - HWdapp/hardhat-zone/contracts/HelloWorld.sol
-> #### edit frontend - HWdapp/react-zone/src/App.js
 
 ##### everytime you update your contract, it will deploy with a new address, you need to point your frontend (in the above file) to that new address.
 
@@ -116,6 +113,10 @@ Please note the goal of this repository is to give a clearer path of (one in bet
 
 
 ## FAQ
+
+- Where can I edit the smart contract and the frontend?
+> #### edit contract - HWdapp/hardhat-zone/contracts/HelloWorld.sol
+> #### edit frontend - HWdapp/react-zone/src/App.js
 
 - why the next text in the DAPP is not changing?
 > probably because common metamask error: "Nonce to high".
@@ -134,6 +135,19 @@ more on this here [nonce to high error](https://medium.com/@thelasthash/solved-n
 > 5. open "HWdapp/react-zone/src/App.js" update the property "contractAddress"
 ##### note: automatically update this file is a nice to have I'm working on
 
+- I'm seeing error:
+```
+Error: call revert exception (method="getText()", errorArgs=null, errorName=null, errorSignature=null, reason=null, code=CALL_EXCEPTION, 
+version=abi/5.5.0)
+    at Logger.makeError (index.ts:225:1)
+    at Logger.throwError (index.ts:237:1)
+    at Interface.decodeFunctionResult (interface.ts:425:1)
+    at Contract.<anonymous> (index.ts:392:1)
+    at Generator.next (<anonymous>)
+    at fulfilled (index.ts:1:1)
+
+```
+> you need to import a local hardhat account to metamask and use local network 8545. how to? -> [add hardhat account to metamask](https://dev.to/dabit3/the-complete-guide-to-full-stack-ethereum-development-3j13)
 
 ## Other helpful resources
 - [buildspace.so](https://buildspace.so) - this is where this repo comes from!
