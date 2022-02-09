@@ -1,4 +1,6 @@
 {
+  "name": "hardhat-zone",
+  "version": "1.0.0",
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.4",
     "@nomiclabs/hardhat-waffle": "^2.0.2",

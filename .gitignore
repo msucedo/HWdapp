@@ -3,6 +3,8 @@ dist
 dist-ssr
 *.local
 
+.yarn
+
 /hardhat-zone/node_modules
 /hardhat-zone/.env
 /hardhat-zone/coverage
@@ -27,3 +29,7 @@ dist-ssr
 /react-zone/npm-debug.log*
 /react-zone/yarn-debug.log*
 /react-zone/yarn-error.log*
+
+/react-zone/src/artifacts
+.pnp.cjs
+.pnp.loader.mjs
