@@ -62,27 +62,27 @@ yarn install
 - Compile smart contract with hardhat
 
 ```bash
-cd HWdapp/hardhat-zone
-yarn hardhat compile
+cd HWdapp
+yarn compile
 ```
 
 - To test on hardhat local network with access to 20 accounts, with 1000eth, 0 blocks mined. note: three open terminal windows needed.
 ###### 	Terminal window 1 - deploy local blockchain
 ```bash
-cd HWdapp/hardhat-zone
-yarn hardhat node
+cd HWdapp
+yarn chain
 ```
 ###### Terminal window 2 - deploy contract to local blockchain
 ```bash
-cd HWdapp/hardhat-zone
-yarn hardhat run scripts/deploy.js --network localhost
+cd HWdapp
+yarn deployLocal
 ```	
 copy the address from the terminal window
 1. open HWdapp/react-zone/src/app.js
 2. update "contractAddress" with your copied address.
 ###### Terminal window 3 - deploy server to interact with your application at `http://localhost:3000/`
 ```bash
-cd HWdapp/react-zone
+cd HWdapp
 yarn start
 ```	
 
@@ -92,10 +92,11 @@ yarn start
 2. add your alchemy.com api url and your metamask account private key
 3. edit "HWdapp/hardhat.zone/hardhat.config.js"
 4. remove last comment inside "networks" to enable the testnet settings
+5. go to "HWdapp/hardhat-zone/package.json", scripts deployTesnet: and update your testnet
 3. run below commands
 ```bash
-cd HWdapp/hardhat-zone
-yarn hardhat run scripts/deploy.js --network rinkeby
+cd HWdapp
+yarn deployTestnet
 ```	
 ###### note: copy the contract address from your terminal window, open etherscan.io for the rinkeby network at search for this address. you should be able to see your contract.
 
@@ -114,10 +115,10 @@ Please note the goal of this repository is to give a clearer path of (one in bet
 ## FAQ
 
 - I'm having issues compiling and running the project, what should I do?
-> I'd encourage you to go try solve the issue by yourself, if no luck ping me @msaucedo#2231 at discord.
+> if no luck by yourself, ping me @msaucedo#2231 at discord.
 
 - I deployed my contract to my locahost network using hardhat but after updating my contract I don't see the changes
-> everytime you make a change to your contract, you need to deploy it again.
+> everytime you make a change to your contract, you need to deploy it again and copy the new address to the HWdapp/react-zone/App.js file (automatically update this file is a nice to have enhacement I'm working on)
 
 - I ran "yarn start" but I can't deploy my contract
 > 1. make sure you are running your localhost node with hardhat
