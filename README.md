@@ -136,7 +136,7 @@ more on this here [nonce to high error](https://medium.com/@thelasthash/solved-n
 ##### note: automatically update this file is a nice to have I'm working on
 
 - I'm seeing error:
-```
+```javascript
 Error: call revert exception (method="getText()", errorArgs=null, errorName=null, errorSignature=null, reason=null, code=CALL_EXCEPTION, 
 version=abi/5.5.0)
     at Logger.makeError (index.ts:225:1)
