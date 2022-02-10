@@ -20,7 +20,7 @@ Think of it as a hello world dapp starter kit.
 
 ![Screenshot](./docs/HWdapp.png)
 
-- show text stored in the blockchain, and update that text. interact directly with ethereum blockchain!! (a testnet).
+- show text stored in the blockchain, and update that text. interact directly with ethereum blockchain!!
 
 - feel free to udpdate the text of my contract through ehterscan.io at RINKEBY -> 0x4E98dfb698055717c013C42e2F84989e9bC9631a
 
@@ -150,10 +150,11 @@ version=abi/5.5.0)
 > you need to import a local hardhat account to metamask and use local network 8545. how to? -> [add hardhat account to metamask](https://dev.to/dabit3/the-complete-guide-to-full-stack-ethereum-development-3j13)
 
 ## Other helpful resources
-- [buildspace.so](https://buildspace.so) - this is where this repo comes from!
-- [eth.build](https://eth.build)
-- [scaffold-eth](https://github.com/scaffold-eth/scaffold-eth)
+- [buildspace.so](https://buildspace.so)
+- [eth.build](https://eth.build) - omg this is pure gold
+- [scaffold-eth](https://github.com/scaffold-eth/scaffold-eth) - if you mastered HWdapp take a look here!!!
 - [cryptozombies](https://cryptozombies.io)
+- [full stack Ethereum guide](https://dev.to/dabit3/the-complete-guide-to-full-stack-ethereum-development-3j13)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
