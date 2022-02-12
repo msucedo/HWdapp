@@ -22,7 +22,7 @@ Think of it as a hello world dapp starter kit.
 
 - show text stored in the blockchain, and update that text. interact directly with ethereum blockchain!!
 
-- feel free to udpdate the text of my contract through ehterscan.io at RINKEBY -> 0x4E98dfb698055717c013C42e2F84989e9bC9631a
+- Everytime you update `HelloWorld` contract, hardhat automatically will point to the new deployed address.
 
 ## Basic architecture diagram
 
