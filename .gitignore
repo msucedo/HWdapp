@@ -2,9 +2,11 @@
 dist
 dist-ssr
 *.local
+node_modules
 
 .yarn
 yarn-error.log
+yarn.lock
 
 /hardhat-zone/node_modules
 /hardhat-zone/.env
@@ -16,8 +18,10 @@ yarn-error.log
 /hardhat-zone/legacyContracts
 /hardhat-zone/legacySrc
 /hardhat-zone/secret.json
+/hardhat-zone/deployments/
 
 /react-zone/node_modules
+/react-zone/src/contracts/
 /.pnp
 /react-zone/.pnp.js
 /react-zone/coverage

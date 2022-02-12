@@ -9,6 +9,7 @@
   "scripts": {
     "chain": "yarn workspace hardhat-zone chain",
     "compile": "yarn workspace hardhat-zone compile",
+    "deploy": "yarn workspace hardhat-zone deploy",
     "deployLocal": "yarn workspace hardhat-zone deployLocal",
     "deployTestnet": "yarn workspace hardhat-zone deployTestnet",
     "start": "yarn workspace react-zone start"

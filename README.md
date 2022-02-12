@@ -59,50 +59,42 @@ yarn install
 
 ## Usage
 
-- Compile smart contract with hardhat
+#### Compile contract
 
 ```bash
 cd HWdapp
 yarn compile
 ```
 
-- To test on hardhat local network with access to 20 accounts, with 1000eth, 0 blocks mined. note: three open terminal windows needed.
-###### 	Terminal window 1 - deploy local blockchain
+#### Deployment quick start!
 ```bash
 cd HWdapp
-yarn chain
+> yarn chain 		// deploy local blockchain
+> yarn deploy 		// deploy contract - run this everytime you update the contract
+> yarn start 		// start server at http://localhost:3000/
 ```
-> ###### please copy any account from the terminal output and add it to metamask, we will use our localhost 8545 network. how to? -> [add hardhat account to metamask](https://dev.to/dabit3/the-complete-guide-to-full-stack-ethereum-development-3j13)
+> ###### please copy any account from the `yarn chain` output and add it to metamask, we will use our localhost 8545 network. how to? -> [add hardhat account to metamask](https://dev.to/dabit3/the-complete-guide-to-full-stack-ethereum-development-3j13)
+> ###### note: you need three separate terminal windows
 
-###### Terminal window 2 - deploy contract to local blockchain
-```bash
-cd HWdapp
-yarn deployLocal
-```	
-###### Terminal window 3 - deploy server to interact with your application at `http://localhost:3000/`
-```bash
-cd HWdapp
-yarn start
-```	
 
-- To test on a testnet (i.e. rinkeby)
-1. edit "HWdapp/hardhat-zone/secret.json"
+#### deploy on testnet (i.e. rinkeby)
+1. go to `HWdapp/hardhat-zone/secret.json`
 2. add your alchemy.com api url and your metamask account private key
-3. edit "HWdapp/hardhat.zone/hardhat.config.js"
-4. remove last comment inside "networks" to enable the testnet settings
-5. go to "HWdapp/hardhat-zone/package.json", scripts deployTesnet: and update your testnet
-3. run below commands
+3. go to `HWdapp/hardhat.zone/hardhat.config.js`
+4. update 'defaultNetwork' with your testnet name i.e. rinkeby
+5. remove last comment inside "networks" to enable testnet settings
+6. go to `HWdapp/react-zone/src/App.js`
+7. uncomment 'chainId' for testnet and comment for localhost
+7. deploy contract
 ```bash
 cd HWdapp
-yarn deployTestnet
+yarn deploy
 ```	
-###### note: copy the contract address from your terminal window, open etherscan.io for the rinkeby network at search for this address. you should be able to see your contract.
+###### note: copy the contract address from your terminal window, open etherscan.io for your selected testnet and search the address. you should be able to see your contract.
 
-
-##### everytime you update your contract, it will deploy with a new address, you need to point your frontend (in the above file) to that new address.
 
 ## Disclaimer
-you might find bugs, but for the simplicity and goal of the exercise they don't represent a risk, take this code as what it is (a path to the needed tools, folders, configurations to build, test and deploy locally a dapp).
+sadly you might find bugs, but for the simplicity and goal of the exercise they don't represent a risk, take this code as what it is (a path to the needed tools, folders, configurations to build, test and deploy locally a dapp).
 
 Please note the goal of this repository is to give a clearer path of (one in between many choices you have on) how to locally build dapps, I found myself having trouble to understand how to develop locally and now that I have a kinda better idea I wanted to share with anyone interested the tools that I used and make available this simple template.
 
@@ -127,13 +119,11 @@ more on this here [nonce to high error](https://medium.com/@thelasthash/solved-n
 - I'm having issues compiling and running the project, what should I do?
 > if no luck by yourself, ping me @msaucedo#2231 at discord.
 
-- what if I want to make a change to the contract?
-> 1. make changes to the contract
-> 2. make sure your node and frontend server are up
-> 3. run "yarn deploy"
-> 4. copy the contract's address
-> 5. open "HWdapp/react-zone/src/App.js" update the property "contractAddress"
-##### note: automatically update this file is a nice to have I'm working on
+- What if I want to make a change to the contract?
+> 1. update contract at "HWdapp/hardhat-zone/contracts/HelloWorld.sol"
+> 2. make sure your node and frontend server are up (`yarn chain` & `yarn start`)
+> 3. run `yarn deploy`
+
 
 - I'm seeing error:
 ```javascript

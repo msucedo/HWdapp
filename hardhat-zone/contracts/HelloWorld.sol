@@ -4,7 +4,7 @@ pragma solidity ^0.8.4;
 
 contract HelloWorld {
 
-	string text;
+	string text = "update me :)";
 
 	event NewText(address addr, string message);
 

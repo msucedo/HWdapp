@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import './App.css';
-import abi from '../src/artifacts/contracts/HelloWorld.sol/HelloWorld.json';
-
-const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+import deployedContracts from "./contracts/hello_world.json";
 
 export default function App() {
   const [textTitle, setTextTitle] = useState(""); // manages input and sending new text
   const [visibleTitle, setVisibleTitle] = useState(""); // manages the website title and retrieve new text
-  const contractABI =  abi.abi;
+  
+  const chainId = 1337; // for localhost
+  // const chainId = 4; // for rinkeby
+  const contractABI = deployedContracts[chainId][0].contracts["HelloWorld"].abi;
+  const contractAddress = deployedContracts[chainId][0].contracts["HelloWorld"].address;
 
-  /*store user public key*/
-  const [currentAccount, setCurrentAccount] = useState("");
+  const [currentAccount, setCurrentAccount] = useState(""); /*store user public key*/
   const checkIfWalletIsConnected = async () => {
     try {
       const { ethereum } = window;
@@ -26,7 +27,6 @@ export default function App() {
         const account = accounts[0];
         console.log("Connected account:", account);
         setCurrentAccount(account)
-        // show last text on UI everytime
         const callGetText = getText();
       } else {
         console.log("No authorized account found")
@@ -37,7 +37,7 @@ export default function App() {
   }
 
 /**
-  * Implement your connectWallet method here
+  * Connect to metamask wallet
   */
   const connectWallet = async () => {
     try {
@@ -58,6 +58,9 @@ export default function App() {
     }
   }
 
+  /**
+   * function to call getText from contract
+   */
   const getText = async () => {
     try {
       const { ethereum } = window;
@@ -68,7 +71,7 @@ export default function App() {
         // this is the contract object
         const helloWorldContract = new ethers.Contract(contractAddress, contractABI, signer);
 
-        // calling function from contract
+        // actual call to function from contract
         let textTxn = await helloWorldContract.getText();
         console.log("text: ",textTxn);
         setTextTitle(textTxn);
@@ -82,6 +85,9 @@ export default function App() {
     }
   }
 
+  /**
+   * function to call updateText from contract
+   */
   const updateText = async () => {
     try {
       const { ethereum } = window;
@@ -92,7 +98,7 @@ export default function App() {
         // this is the contract object
         const helloWorldContract = new ethers.Contract(contractAddress, contractABI, signer);
 
-        // call contract function
+        // actual call to contract function
         const updateTextTxn = await helloWorldContract.updateText(textTitle);
         console.log("mining new name...")
         await updateTextTxn.wait();
