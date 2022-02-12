@@ -75,6 +75,7 @@ cd HWdapp
 ```
 > ###### please copy any account from the `yarn chain` output and add it to metamask, we will use our localhost 8545 network. how to? -> [add hardhat account to metamask](https://dev.to/dabit3/the-complete-guide-to-full-stack-ethereum-development-3j13)
 > ###### note: you need three separate terminal windows
+> ###### make sure metamask is running on localhost:8545!
 
 
 #### deploy on testnet (i.e. rinkeby)
