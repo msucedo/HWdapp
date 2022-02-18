@@ -22,7 +22,7 @@ Think of it as a hello world dapp starter kit.
 
 - show text stored in the blockchain, and update that text. interact directly with ethereum blockchain!!
 
-- Everytime you update `HelloWorld` contract, hardhat automatically will point to the new deployed address.
+- Everytime you update `HelloWorld` contract, ethers automatically will point to the new deployed address.
 
 ## Basic architecture diagram
 

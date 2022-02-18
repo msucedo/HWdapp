@@ -9,6 +9,7 @@ export default function App() {
   
   const chainId = 1337; // for localhost
   // const chainId = 4; // for rinkeby
+  // const chainId = ?; // other testnets
   const contractABI = deployedContracts[chainId][0].contracts["HelloWorld"].abi;
   const contractAddress = deployedContracts[chainId][0].contracts["HelloWorld"].address;
 
