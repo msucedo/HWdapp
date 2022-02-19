@@ -14,6 +14,8 @@ export default function App() {
   const contractAddress = deployedContracts[chainId][0].contracts["HelloWorld"].address;
 
   const [currentAccount, setCurrentAccount] = useState(""); /*store user public key*/
+
+  // check if a wallet is already logged in
   const checkIfWalletIsConnected = async () => {
     try {
       const { ethereum } = window;
@@ -37,9 +39,7 @@ export default function App() {
     }
   }
 
-/**
-  * Connect to metamask wallet
-  */
+  // connect a wallet
   const connectWallet = async () => {
     try {
       const { ethereum } = window;
@@ -59,22 +59,21 @@ export default function App() {
     }
   }
 
-  /**
-   * function to call getText from contract
-   */
+  // GET action
   const getText = async () => {
     try {
       const { ethereum } = window;
 
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
-        const signer = provider.getSigner();
-        // this is the contract object
-        const helloWorldContract = new ethers.Contract(contractAddress, contractABI, signer);
+        console.log("PROVIDER: ",provider);
+        // this is the contract object, note this is not editable
+        const readOnlyContract = new ethers.Contract(contractAddress, contractABI, provider);
 
         // actual call to function from contract
-        let textTxn = await helloWorldContract.getText();
+        let textTxn = await readOnlyContract.getText();
         console.log("text: ",textTxn);
+
         setTextTitle(textTxn);
         setVisibleTitle(textTxn);
         await textTxn.wait;
@@ -86,26 +85,24 @@ export default function App() {
     }
   }
 
-  /**
-   * function to call updateText from contract
-   */
+  // POST action
   const updateText = async () => {
     try {
       const { ethereum } = window;
 
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
-        const signer = provider.getSigner();
-        // this is the contract object
-        const helloWorldContract = new ethers.Contract(contractAddress, contractABI, signer);
+        const signer = provider.getSigner(); // when updating a contract we do need a signer
+
+        // this is the contract object - note this is editable
+        const editableContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         // actual call to contract function
-        const updateTextTxn = await helloWorldContract.updateText(textTitle);
+        const updateTextTxn = await editableContract.updateText(textTitle);
         console.log("mining new name...")
         await updateTextTxn.wait();
         console.log("Mined --", updateTextTxn.hash);
-        // to refresh and show new title
-        const callGetText = getText();
+        getText(); // to refresh and show new title
       } else {
         console.log("Ethereum object doesn't exist!");
       }
